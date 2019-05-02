@@ -1,0 +1,22 @@
+/* Resets the box sizes and allows us to reliably use % values for columns. */
+* {
+    box-sizing: border-box;
+}
+/*
+ * While you've never seen the CSS syntax below before, this allows us to set a
+ * global property and value to any class that starts with the name "col-". The
+ * below will float all the "col-" classes left. You define this if you have the
+ * same property and value declaration for each element and it's a shorter and
+ * cleaner method to having to retype "float:left" in every single "col-""
+ * declaration. This way, you only have to specify the widths for the columns as
+ * the float has already been declared. Nice, hey?
+ */
+/*[class*="col-"] {
+    float: left;
+    padding: 15px;
+ /*border: 1px solid red; */
+      /* You can add other styles here if you want it to apply to all columns. */
+}
+/* Now we define the widths for our respective columns. */
+/*.col-1_2 { width: 50%; }   /* This is 1/2 of 100% */
+/*.col-2_2 { width: 50%; }  /* This is 2/2 100% */
